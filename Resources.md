@@ -18,6 +18,7 @@ This file documents a lot of helpful resources for various DSA/Impl. related top
 12. [⭐ Algorithms Library](https://lib.cp-algorithms.com/)
 13. [HackerEarth Intro to DP](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/tutorial/)
 14. [Bit Manipulation](https://graphics.stanford.edu/~seander/bithacks.html)
+15. [Introduction to Algorithms | Third Edition](https://github.com/exoad/books/blob/main/Introduction%20to%20Algorithms%20-%20Third%20Edition.pdf)
 
 ## Competitive Programming
 
