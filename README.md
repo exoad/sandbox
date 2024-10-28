@@ -13,3 +13,5 @@ This is Jack Meng's coding practice repo. Most of the code here are just my solu
 * [`Resources.md`](./Resources.md) - Contains helpful resources that I have found to be extremely helpful.
 
 * [`To_Learn.md`](./To_Learn.md) - Are just simple reminders of what I still need to work on.
+
+* [`interesting.txt`](./interesting.txt) - This is my old list of resources.
