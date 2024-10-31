@@ -29,14 +29,15 @@
 #pragma GCC diagnostic ignored "-Wmissing-braces"
 #pragma GCC diagnostic ignored "-Wmissing-declarations"
 using namespace std;
+// using namespace __gnu_pbds;
 #define I64 long long
 #define I32 int
 #define MAP_I64_I64 map<I64,I64>
 #define BOOL bool
 #define TRUE 1
 #define FALSE 0
-#define YIELD(n) return n;
 #define U8 char
+#define YIELD(n) return n
 #define sz(x) I32((x).size())
 #define bg(x) begin(x)
 #define all(x) bg(x), end(x)
@@ -44,11 +45,13 @@ using namespace std;
 #define st(x) sort(all(x)) 
 #define U0 void
 #define MAP map
+#define __INT_64__ 1LL
 #define pb push_back
 #define STATIC const
 #define eb emplace_back
 #define it insert
 #define STR string
+#define DEFAULT FALSE
 constexpr I32 __b(I32 r)
 {
     return 1<<r;
@@ -69,53 +72,57 @@ U0 setIO(STR name="")
 // --------------------------------- //
 // 問題 ~ コンテストに参加する前に ~ 問題 //
 // --------------------------------- //
-STATIC I32 MAX_N=1e5+15;
-I32 n,no[MAX_N];
-U8 res[MAX_N];
-vector<I32> graph[MAX_N],c(MAX_N);
+STATIC I32 MOD=998244353,MAX_N=3e5+15;
+I32 t,n,to[MAX_N<<1],dp[MAX_N],sz[MAX_N],follow[MAX_N<<1],f[MAX_N],res,x;
 #define RANGE(a,b) for(I32 i=a;i<=b;i++)
-U0 dfs(I32 u,I32 parent)
+U0 dfs(I32 u,I32 pt)
 {
-	c[u]=TRUE;
-	RANGE(0,graph[u].size()-1)
-	{
-		if(no[graph[u][i]]==FALSE&&u!=parent)
-		{
-			dfs(graph[u][i],u);
-			c[u]+=c[graph[u][i]];
-		}
-	}
-}
-I32 center(I32 v,I32 root,I32 parent)
-{
-	RANGE(0,graph[v].size()-1)
-		if(no[graph[v][i]]==FALSE&&parent!=graph[v][i]&&c[graph[v][i]]*2>c[root])
-			YIELD(center(graph[v][i],root,v));
-	YIELD(v);
-}
-U0 re(I32 node=1,U8 curr=(U8)41)
-{
-    dfs(node,-1);
-    I32 center_=center(node,node,-1);
-    no[center_]=TRUE;
-    res[center_]=curr;
-    RANGE(0,graph[center_].size()-1)
-        if(no[graph[center_][i]]==FALSE)
-            re(node,curr+1);
+    sz[u]=TRUE;
+    dp[u]=TRUE;
+    for(I32 i=f[u];i==TRUE;i=follow[i])
+    {
+        if(to[u]!=pt)
+        {
+            dfs(to[i],u);
+            dp[u]=1LL*dp[u]*(dp[to[i]]+1)%MOD;
+            sz[u]+=sz[to[i]];
+        }
+    }
+    res=(res+dp[u])%MOD;
 }
 I32 main()
 {
-    // setIO();
-    cin>>n;
-    for(I32 i=0;i<n;i++)
+    /*
+    If in the city only the intersections contained in this set are dangerous, then any simple path in the city contains no more than two dangerous intersections.
+    pseudocode:
+    if to e not pt {
+			dfs to e from u
+			siz[u]+=siz[to[e]];
+		}
+	}
+    */
+    setIO();
+    cin>>t;
+    while(t--)
     {
-        I32 a,b;
-        cin>>a>>b;
-        graph[a].pb(a);
-        graph[b].pb(b); 
+        cin>>n;
+        res=DEFAULT;
+        x=DEFAULT;
+        RANGE(1,n)
+            f[i]=DEFAULT;
+        RANGE(1,n)
+        {
+            I64 u,v;
+            cin>>u>>v;
+            follow[++res]=f[u];
+            f[u]=x;
+            to[x]=v;
+            follow[++res]=f[v];
+            f[v]=x;
+            to[x]=u; 
+        }
+        dfs(DEFAULT,1);
+        cout<<(res+1)%MOD<<endl;
     }
-    re();
-    RANGE(0,n-1)
-		cout<<res[i]<<" ";
-    YIELD(0);
+    YIELD(DEFAULT);
 }
