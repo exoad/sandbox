@@ -48,6 +48,7 @@ using namespace std;
 #define eb emplace_back
 #define it insert
 #define STR string
+#define RNG(n) for(I32 i=1;i<=n;i++)
 constexpr I32 __b(I32 r)
 {
     return 1<<r;
@@ -68,52 +69,47 @@ U0 setIO(STR name="")
 // --------------------------------- //
 // 問題 ~ コンテストに参加する前に ~ 問題 //
 // --------------------------------- //
-STATIC I32 MAX_N=2e5+10;
-I32 dp[MAX_N],a[MAX_N];
-vector<I32> graph[MAX_N];
-U0 dfs(I32 u,I32 f)
+STATIC I32 MAX_N=2e5+15;
+vector<I32> adj[MAX_N];
+I64 a[MAX_N],p[MAX_N],n;
+U0 dfs2(I64 x,I64 t,I64 v)
 {
-    for(I32 v:graph[u])
-    {
-        if(v==f)
-            continue;
-        dp[v]=max(dp[v],dp[u]+(dp[v]>0?0:dp[v]));
-        dfs(v,u);
-    }
+    if(t!=-1)
+        p[x]=v+n-2*a[x];
+    for(I64 u:adj[x])
+        if(u!=t)
+            dfs2(u,x,p[x]);
 }
-U0 e(I32 u,I32 f)
+U0 dfs(I64 x,I64 t)
 {
-    dp[u]=a[u];
-    for(I32 v:graph[u])
+    a[x]=1;
+    for(I64 u:adj[x])
     {
-        if(v==f)
-            continue;
-        e(v,u);
-        if(dp[v]>0) 
-            dp[u]+=dp[v];
+        if(u!=t)
+        {
+            dfs(u,x);
+            a[x]+=a[u];
+            p[x]+=p[u];    
+        }
     }
+    p[x]+=a[x];
 }
 I32 main()
 {
-    // WA SAMPLES :(
-    // setIO();
-    I32 n;
+    setIO();
     cin>>n;
-    for(I32 i=1;i<=n;i++)
-    { 
+    RNG(n)
         cin>>a[i];
-        a[i]=a[i]*2-1;
-    }
-    for(I32 i=0;i<n-1;i++)
+    RNG(n-1)
     {
-        I32 u_i,v_i;
-        cin>>u_i>>v_i;
-        graph[u_i].pb(u_i);
-        graph[v_i].pb(v_i);
+        I32 u,v;
+        cin>>u>>v;
+        adj[u-1].pb(u-1);
+        adj[v-1].pb(v-1);
     }
-    e(1,0);
     dfs(1,0);
-    for(I32 i=1;i<=n;i++)  
-        cout<<dp[i]<<" ";
+    dfs2(0,1,-1);
+    RNG(n)
+        cout<<p[i]<<" ";
     return 0;
 }

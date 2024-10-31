@@ -11,7 +11,7 @@ then
 elif [ "$1" == "googer" ] ;
 then 
     cp modules/googer.cxx "$2.cxx"
-    code "$2.cxx"
+    code "./$2.cxx"
     echo -e "\e[37;42;1m[✓]( ͡°👅 ͡°)[==出力==]\n\n\nコンテスト期間中における、ビジュアライズ結果の共有や解法・考察に関する言及は禁止されています。ご注意下さい。\n\n\n\n\e[0m\n\n\e[33;40;1m─=≡Σ((( つ•̀ω•́)つ AC\e[0m"
 elif [ "$1" == "ok" ] ;
 then

@@ -36,8 +36,6 @@ using namespace std;
 #define BOOL bool
 #define TRUE 1
 #define FALSE 0
-#define U8 char
-#define YIELD(n) return n
 #define sz(x) I32((x).size())
 #define bg(x) begin(x)
 #define all(x) bg(x), end(x)
@@ -74,5 +72,5 @@ U0 setIO(STR name="")
 I32 main()
 {
     // setIO();
-    YIELD(0);
+    return 0;
 }

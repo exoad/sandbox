@@ -51,3 +51,9 @@ This file documents a lot of helpful resources for various DSA/Impl. related top
 2. [Java SE 17](https://docs.oracle.com/en/java/javase/17/docs/api/)
 3. [Dart](https://api.dart.dev/stable/3.5.4/index.html)
 4. [Java Collections Framework SE 17](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/doc-files/coll-overview.html)
+
+## Cool Tools
+
+Just some tools I use alongside what I practice with that are pretty nice to have.
+
+1. [Codeforces Problem Randomizer](https://karimelghamry.github.io/Codeforces-Randomizer/)
