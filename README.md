@@ -1,7 +1,6 @@
 # Practice
 
-This is Jack Meng's coding practice repo. Most of the code here are just my solutions to online judges (e.g. Codeforces, Atcoder). However, I also upload my notes and other helpful resources into this repository as well.
-
+This is Jack Meng's coding practice repo. Most of the things here are just my solves to online judges like LeetCode, AtCoder, etc., but I also write notes and other helpful stuffs.
 :)
 
 ## Content
