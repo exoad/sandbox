@@ -32,7 +32,7 @@ $$
 
 ### Example
 
-Sample code
+Sample code achieved through $O(N)$
 
 ## Sample
 
@@ -57,6 +57,16 @@ int[] prefixSum(int[] x)
     for(int i=1;i<x.length;i++)
         y[i]=y[i-1]+x[i];
     return y;
+}
+```
+
+### C++ with [`std::partial_sum`](https://en.cppreference.com/w/cpp/algorithm/partial_sum)
+
+```cxx
+#include <numeric>
+void prefixSum(vector<int>& r)
+{
+    std::partial_sum(r.begin(),r.end(),r.begin());
 }
 ```
 
