@@ -7,6 +7,8 @@ This is Jack Meng's coding practice repo. Most of the things here are just my so
 
 * [`./Solves/`](./Solves/) - Contains all of my general programming solutions and notes **as of October 2024**. These are mostly for OJs like Codeforces, Atcoder, LeetCode, etc..
 
+* [`./Notes/`](./Notes/) - All of my documented notes that I hopefully have formatted properly. They cover various topics.
+
 * [`./Old-Solves/`](./Old-Solves/) - Contains all of my solutions from my past (pre 2023 era).
 
 * [`Resources.md`](./Resources.md) - Contains helpful resources that I have found to be extremely helpful.
