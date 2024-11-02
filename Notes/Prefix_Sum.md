@@ -12,9 +12,9 @@ x_1,\\
 x_2, \\
 \dots \\
 x_i
-\newline
-\downarrow{}
-\newline
+\\
+|
+\\
 y_0=x_0,\\
 y_1=x_0+x_1,\\
 y_2=x_0+x_1+x_2 \\
@@ -25,7 +25,7 @@ $$
 ### The general formula
 
 $$
-y_i=y_{i-1}+x_i
+y_i=y_{i-1}+x_i=\sum_{j=0}^{i} x_j
 $$
 
 - Where $x$ represents the original array
@@ -64,3 +64,4 @@ int[] prefixSum(int[] x)
 ## Additional References
 
 1. [**USACO Guide** "Introduction to Prefix Sum"](https://usaco.guide/silver/prefix-sums?lang=cpp)
+2. [C++ `std::partial_sum`](https://cplusplus.com/reference/numeric/partial_sum/)

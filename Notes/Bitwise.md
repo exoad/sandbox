@@ -78,6 +78,31 @@ $$
 \end{array}
 $$
 
+### *LOGICAL* NOT `~`
+
+> This is an unary operation, meaning that only one input is required.
+
+Given a binary representation it flips each bit to its complement. Meaning `0` becomes `1` and `1` becomes `0`. It is also known as the *bitwise complement*.
+
+$$
+\begin{array}{ccc}
+``44" & \sim & \rightarrow &``-45" \\ \hline
+1 & \sim & \rightarrow & 0 \\
+0 & \sim & \rightarrow & 1 \\
+1 & \sim & \rightarrow & 0 \\
+1 & \sim & \rightarrow & 0 \\
+0 & \sim & \rightarrow & 1 \\
+0 & \sim & \rightarrow & 1 \\ \hline
+101100 & \sim & \rightarrow & (-)010011
+\end{array}
+$$
+
+It can also be simplified to the following expression:
+
+$$
+NOT\ x:=-x-1
+$$
+
 ### Example
 
 Sample code
