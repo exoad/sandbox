@@ -64,7 +64,8 @@ int[] prefixSum(int[] x)
 
 ```cxx
 #include <numeric>
-void prefixSum(vector<int>& r)
+#include <vector>
+void prefixSum(std::vector<int>& r)
 {
     std::partial_sum(r.begin(),r.end(),r.begin());
 }
