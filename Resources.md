@@ -53,6 +53,11 @@ This file documents a lot of helpful resources for various DSA/Impl. related top
 3. [Dart](https://api.dart.dev/stable/3.5.4/index.html)
 4. [Java Collections Framework SE 17](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/doc-files/coll-overview.html)
 
+## C++ References
+
+1. [Pragmas explained for Competitive Programming](https://nor-blog.codeberg.page/posts/2021-10-26-gcc-optimization-pragmas/)
+2. [GCC Optimization](https://wiki.gentoo.org/wiki/GCC_optimization)
+
 ## Cool Tools
 
 Just some tools I use alongside what I practice with that are pretty nice to have.
