@@ -36,8 +36,8 @@ Generating these results:
 $$
 \begin{array}{ccc}
 Method & Time\ \mu{s} \\ \hline
-Spread\ Operator\ \texttt{...} & 3634\ \mu{s} \\ \hline
-Concat\ Operator\ \texttt{+} & 4094\ \mu{s} \\ \hline
+Spread\ Operator\ \texttt{...} & 3634\ \mu{s} \\ 
+Concat\ Operator\ \texttt{+} & 4094\ \mu{s} \\
 \texttt{List.addAll} & 1359\ \mu{s}
 \end{array}
 $$
