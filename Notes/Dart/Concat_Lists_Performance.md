@@ -49,7 +49,7 @@ void main(List<String> args) {
 ### Results
 
 $$
-\begin{array}{ccc}
+\begin{array}{lr}
 Method & Time\ \mu{s} \\ \hline
 Spread\ Operator\ \texttt{...} & 4704\ \mu{s} \\
 Concat\ Operator\ \texttt{+} & 3453\ \mu{s} \\

@@ -113,7 +113,7 @@ void main(List<String> args) {
 Generating the following results:
 
 $$
-\begin{array}{ccc}
+\begin{array}{lr}
 Method & Time\ \mu{s} \\ \hline
 Brute\ force & 358\ \mu{s} \\
 \texttt{String.codeUnits}\ comparison & 248\ \mu{s} \\
@@ -126,6 +126,25 @@ $$
 ## Conclusion
 
 The most optimal way is to utilize direct comparison of `String.codeUnits` and avoid utilizing something like RegEx.
+
+### Best Option
+
+```dart
+const int _zero = 48; // deduced using "0".codeUnits[0]
+const int _nine = 57; // deduced using "9".codeUnits[0]
+bool codeUnits(String str, int idx) {
+  int cuIdx = str.codeUnits[idx];
+  return cuIdx >= _zero && cuIdx <= _nine;
+}
+```
+
+### Second Best Option
+
+```dart
+bool bitManipCodeUnits(String str, int idx) {
+  return (str.codeUnitAt(idx) ^ 0x30) <= 9;
+}
+```
 
 ## References
 

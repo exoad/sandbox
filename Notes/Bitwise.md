@@ -26,7 +26,7 @@ You can try to think of `1` as `TRUE` and `0` as `FALSE` and treating some of th
 Takes two binary representations (**of equal length**) and for each pair of bits that are both `1` results in a `1` otherwise `0`.
 
 $$
-\begin{array}{ccc}
+\begin{array}{cccc}
 ``44" & \& &``29" & \rightarrow & ``12" \\ \hline
 1 & \& & 0 & \rightarrow & 0 \\
 0 & \& & 1 & \rightarrow & 0 \\
@@ -45,7 +45,7 @@ $$
 Takes two binary representations (**of equal length**) and for each pair of bits that contains at least `1` bit, it results in a `1` bit.
 
 $$
-\begin{array}{ccc}
+\begin{array}{cccc}
 ``44" & \small| &``29" & \rightarrow & ``61" \\ \hline
 1 & \small| & 0 & \rightarrow & 1 \\
 0 & \small| & 1 & \rightarrow & 1 \\
@@ -66,7 +66,7 @@ Also known as the *exclusive OR*. It takes two binary representations (**of equa
 > It is commonly denoted with the $\oplus$ symbol.
 
 $$
-\begin{array}{ccc}
+\begin{array}{cccc}
 ``44" & \oplus &``29" & \rightarrow & ``49" \\ \hline
 1 & \oplus & 0 & \rightarrow & 1 \\
 0 & \oplus & 1 & \rightarrow & 1 \\
@@ -85,7 +85,7 @@ $$
 Given a binary representation it flips each bit to its complement. Meaning `0` becomes `1` and `1` becomes `0`. It is also known as the *bitwise complement*.
 
 $$
-\begin{array}{ccc}
+\begin{array}{cccc}
 ``44" & \sim & \rightarrow &``-45" \\ \hline
 1 & \sim & \rightarrow & 0 \\
 0 & \sim & \rightarrow & 1 \\
