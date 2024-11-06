@@ -14,31 +14,46 @@ All of the following code was run with the following piece of code:
 
 ```dart
 import "dart:math";
+
 void main(List<String> args) {
-  Random r=Random();
-  List<int> a=List<int>.generate(100000,(idx)=>r.nextInt(239483));
-  List<int> b=List<int>.generate(100001,(idx)=>r.nextInt(239823));
-  DateTime now=DateTime.now();
+  Random r = Random();
+  List<int> a = List<int>.generate(100000, (idx) => r.nextInt(239483));
+  List<int> b = List<int>.generate(100001, (idx) => r.nextInt(239823));
+  DateTime now = DateTime.now();
   a.addAll(b);
   print(DateTime.now().difference(now).inMicroseconds);
-  DateTime now=DateTime.now();
-  a+b;
-  print(DateTime.now().difference(now).inMicroseconds);
-  DateTime now=DateTime.now();
-  <int>[...a,...b];
-  print(DateTime.now().difference(now).inMicroseconds);
+  DateTime now1 = DateTime.now();
+  a + b;
+  print(DateTime.now().difference(now1).inMicroseconds);
+  DateTime now2 = DateTime.now();
+  <int>[...a, ...b];
+  print(DateTime.now().difference(now2).inMicroseconds);
   return;
 }
 ```
 
-Generating these results:
+> You can also find it [here](./src/concat_list/concat_list.dart)
+
+### Environment
+
+#### Software
+
+- **Kernel:** `6.5.0-1025-azure`
+- **Operating System:** `GNU/Linux Ubuntu-22.04.1`
+
+#### Hardware
+
+- **Processor:** `AMD EPYC 7763`
+- **Total RAM** `8 GB`
+
+### Results
 
 $$
 \begin{array}{ccc}
 Method & Time\ \mu{s} \\ \hline
-Spread\ Operator\ \texttt{...} & 3634\ \mu{s} \\ 
-Concat\ Operator\ \texttt{+} & 4094\ \mu{s} \\
-\texttt{List.addAll} & 1359\ \mu{s}
+Spread\ Operator\ \texttt{...} & 4704\ \mu{s} \\
+Concat\ Operator\ \texttt{+} & 3453\ \mu{s} \\
+\texttt{List.addAll} & 1391\ \mu{s}
 \end{array}
 $$
 
