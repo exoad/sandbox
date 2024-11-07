@@ -346,7 +346,8 @@ vector<int> bfs(Node* root)
     if(root==nullptr)
         return {};
     vector<int> res;
-    queue<int> q;
+    queue<Node*> q;
+    q.push(root);
     while(!q.empty())
     {
         Node* curr=q.pop();
