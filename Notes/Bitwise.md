@@ -19,7 +19,7 @@ There are 6 bitwise operators:
 
 You can try to think of `1` as `TRUE` and `0` as `FALSE` and treating some of the logical operators as just like regular boolean operations.
 
-### *LOGICAL* AND `&`
+### *LOGICAL* AND $\&$
 
 > This is a binary operation, meaning it requires 2 inputs.
 
@@ -38,7 +38,7 @@ $$
 \end{array}
 $$
 
-### *LOGICAL* OR `|`
+### *LOGICAL* OR $\small|$
 
 > This is a binary operation, meaning it requires 2 inputs.
 
@@ -57,7 +57,7 @@ $$
 \end{array}
 $$
 
-### *LOGICAL* XOR `^`
+### *LOGICAL* XOR $\oplus$
 
 > This is a binary operation, meaning it requires 2 inputs.
 
@@ -78,29 +78,31 @@ $$
 \end{array}
 $$
 
-### *LOGICAL* NOT `~`
+XOR can be derived from the other logical operators. [Here](#xor)
+
+### *LOGICAL* NOT $\neg$
 
 > This is an unary operation, meaning that only one input is required.
 
-Given a binary representation it flips each bit to its complement. Meaning `0` becomes `1` and `1` becomes `0`. It is also known as the *bitwise complement*.
+Given a binary representation it flips each bit to its complement. Meaning `0` becomes `1` and `1` becomes `0`. It is also known as the *bitwise complement*. In many popular programming languages it is represented with the symbol `~`.
 
 $$
 \begin{array}{cccc}
-``44" & \sim & \rightarrow &``-45" \\ \hline
-1 & \sim & \rightarrow & 0 \\
-0 & \sim & \rightarrow & 1 \\
-1 & \sim & \rightarrow & 0 \\
-1 & \sim & \rightarrow & 0 \\
-0 & \sim & \rightarrow & 1 \\
-0 & \sim & \rightarrow & 1 \\ \hline
-101100 & \sim & \rightarrow & (-)010011
+``44" & \neg & \rightarrow &``-45" \\ \hline
+1 & \neg & \rightarrow & 0 \\
+0 & \neg & \rightarrow & 1 \\
+1 & \neg & \rightarrow & 0 \\
+1 & \neg & \rightarrow & 0 \\
+0 & \neg & \rightarrow & 1 \\
+0 & \neg & \rightarrow & 1 \\ \hline
+101100 & \neg & \rightarrow & (-)010011
 \end{array}
 $$
 
 It can also be simplified to the following expression:
 
 $$
-NOT\ x:=-x-1
+\neg{x}:=-x-1
 $$
 
 ### Example
@@ -109,5 +111,30 @@ Sample code
 
 ## Sample
 
+### Adding two numbers
+
+#### C++
+
+```cpp
+int add(int a,int b)
+{
+    return 2*(a&b)+(a^b);
+}
+```
+
+
+### XOR 
+
+#### C++
+
+```cpp
+int xor(int a,int b)
+{
+    return ~(a&b)&(a|b);
+}
+```
 
 ## Additional References
+
+1. [Codeforces: Errichto's blog on Bitwise operations](https://codeforces.com/blog/entry/73490)
+2. [USACO Guide: Intro to Bitwise](https://usaco.guide/silver/intro-bitwise)

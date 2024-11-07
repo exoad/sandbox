@@ -25,6 +25,7 @@ This file documents a lot of helpful resources for various DSA/Impl. related top
 1. [Ary's OP USACO Syllabus](https://www.overleaf.com/project/5f066f5dfb993800018cb314)
 2. [⭐ Competitive-Programming Algorithms](https://cp-algorithms.com/)
 3. [USACO Guide](https://usaco.guide/)
+4. [Darren Yao's USACO Handbook](https://darrenyao.com/usacobook/cpp.pdf)
 
 ## Training
 
