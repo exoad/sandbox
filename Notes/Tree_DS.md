@@ -16,12 +16,13 @@ These words are very important to known in general when working with non-linear 
 5. **Root** - The topmost node of the Tree and does not have a parent node.
 6. **Ancestor** - All nodes that precedes a node.  
 7. **Depth/Level** - The level of a node refers to how many nodes down it is from the root node, with the *level of the root node=0*
-8. **Leaf** - Any nodes that do not have any children
+8. **Leaf** - Any nodes that do not have any children (also known as ***external nodes***)
 9. **Branch/Path** - A path on the tree that spans from the root to a leaf
 10. **Height** - The number of edges along the longest branch/path in the tree
 11. **Subtree** - Any node that has its own descendants/children
 12. **Height of a Node** is the length of the longest path from that node to a leaf node
 13. **Degree of a Node** is the amount of children it has
+14. **Internal Nodes** - All nodes that are not leaves (includes the root if the root is not a leaf itself)
 
 ## Properties
 

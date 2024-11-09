@@ -4,6 +4,17 @@ Most programming language frameworks come with some sort of way to sort generic 
 
 > *For most competitive programming purposes, implementation of sorting algorithms are not usually required.*
 
+## Table of Contents
+
+- [Sorting](#sorting)
+   * [C++](#c)
+      + [Arrays](#arrays)
+      + [`std::vector`, etc](#-raw-stdvector-endraw-etc)
+   * [Java](#java)
+      + [Arrays](#arrays-1)
+      + [Collections](#collections)
+   * [Dart](#dart)
+
 ## C++
 
 C++'s STL comes with the `std::sort` located in the [`algorithm`](https://cplusplus.com/reference/algorithm/) header.

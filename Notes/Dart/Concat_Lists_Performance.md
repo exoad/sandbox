@@ -1,5 +1,17 @@
 # Concatenation of Lists (Performance Analysis)
 
+## Table of Contents
+
+- [Concatenation of Lists (Performance Analysis)](#concatenation-of-lists-performance-analysis)
+   * [Overview](#overview)
+   * [Analysis](#analysis)
+      + [Environment](#environment)
+         - [Software](#software)
+         - [Hardware](#hardware)
+      + [Results](#results)
+   * [Conclusion](#conclusion)
+   * [References](#references)
+
 ## Overview
 
 In Dart there a few ways to add two `List`s together, but the different ways to do so may have a performance overhead.

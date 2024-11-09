@@ -1,5 +1,22 @@
 # Bitwise Operations
 
+## Table of Contents
+
+- [Bitwise Operations](#bitwise-operations)
+   * [Definition](#definition)
+      + [Intuition](#intuition)
+      + [*LOGICAL* AND $\&$](#logical-and-\amp)
+      + [*LOGICAL* OR $\small|$](#logical-or-\small)
+      + [*LOGICAL* XOR $\oplus$](#logical-xor-\oplus)
+      + [*LOGICAL* NOT $\neg$](#logical-not-\neg)
+      + [Example](#example)
+   * [Sample](#sample)
+      + [Adding two numbers](#adding-two-numbers)
+         - [C++](#c)
+      + [XOR ](#xor)
+         - [C++](#c-1)
+   * [Additional References](#additional-references)
+
 ## Definition
 
 Manipulation of bits (bit manipulation) at the bit level. Most of the time they are used for their ability to be primitive and thus resulting in them being quite fast.

@@ -45,6 +45,23 @@ Here is a quick visual I found to be helpful (DFS is on the left, BFS is on the 
 
 ![https://builtin.com/sites/www.builtin.com/files/inline-images/1_tree-traversal.gif](https://builtin.com/sites/www.builtin.com/files/inline-images/1_tree-traversal.gif)
 
+## Table of Contents
+
+- [Tree Traversal](#tree-traversal)
+   * [Depth-First Search](#depthfirst-search)
+      + [In-Order Traversal](#inorder-traversal)
+         - [C++ Snippet #1](#c-snippet-1)
+         - [C++ Snippet #2](#c-snippet-2)
+      + [Pre-Order Traversal](#preorder-traversal)
+         - [C++ Snippet #1](#c-snippet-1-1)
+         - [C++ Snippet #2](#c-snippet-2-1)
+      + [Post-Order Traversal](#postorder-traversal)
+         - [C++ Snippet #1](#c-snippet-1-2)
+         - [C++ Snippet #2](#c-snippet-2-2)
+   * [Breadth-First Search (BFS) / Level Order Traversal](#breadthfirst-search-bfs-level-order-traversal)
+      + [C++ Snippet](#c-snippet)
+   * [References](#references)
+
 ## Depth-First Search
 
 This traversal technique is known as *depth* first search because it prioritizes searching a given root/path as far as possible (depth) before *backtracking.* With this method, there are 3 approaches:

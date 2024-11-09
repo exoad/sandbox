@@ -1,5 +1,6 @@
 # Queue
 
+
 A queue is FIFO (*First In First Out*) data structure that supports the following operations in $O(1)$ time complexity:
 
 - `push` (enqueuing) - inserts an element at the end of the queue
@@ -7,6 +8,14 @@ A queue is FIFO (*First In First Out*) data structure that supports the followin
 - `front` (peek) - peek at the element at the front of the queue
 
 A good way to think of this data structure is like a physical queue in the real world like waiting in line.
+
+## Table of Contents
+
+- [Queue](#queue)
+   * [Implementation](#implementation)
+      + [Java](#java)
+      + [C++](#c)
+   * [Other forms](#other-forms)
 
 ## Implementation
 

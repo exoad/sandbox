@@ -1,5 +1,17 @@
 # Prefix Sum
 
+## Table of Contents
+
+- [Prefix Sum](#prefix-sum)
+   * [Definition](#definition)
+      + [The general formula](#the-general-formula)
+      + [Example](#example)
+   * [Sample](#sample)
+      + [Dart](#dart)
+      + [Java](#java)
+      + [C++ with `std::partial_sum`](#c-with-raw-stdpartialsum-endraw-)
+   * [Additional References](#additional-references)
+
 ## Definition
 
 Also known as a *cumulative sum* or *inclusive scan* is the sum of prefixes of an array $x$.

@@ -1,5 +1,18 @@
 # Comparing methods of checking `isDigit()`
 
+## Table of Contents
+
+- [Comparing methods of checking `isDigit()`](#comparing-methods-of-checking-raw-isdigit-endraw-)
+   * [Overview](#overview)
+   * [Analysis](#analysis)
+      + [Environment](#environment)
+         - [Software](#software)
+         - [Hardware](#hardware)
+   * [Conclusion](#conclusion)
+      + [Best Option](#best-option)
+      + [Second Best Option](#second-best-option)
+   * [References](#references)
+
 ## Overview
 
 This is a common concept that needs to be utilized in various languages and frameworks where given a string index/char, we need to determine if it is numerical (0-9).

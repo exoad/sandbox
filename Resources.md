@@ -47,6 +47,10 @@ This file documents a lot of helpful resources for various DSA/Impl. related top
 16. [HackerEarth](https://www.hackerearth.com/)
 17. [LuoGu (CHINESE)](https://www.luogu.com.cn/problem/list)
 
+## Blogs/User Generated Posts
+
+1. [xlong88](https://xlong88.github.io/)
+
 ## Reference
 
 1. [C++](https://cplusplus.com/reference/)
