@@ -367,7 +367,8 @@ vector<int> bfs(Node* root)
     q.push(root);
     while(!q.empty())
     {
-        Node* curr=q.pop();
+        Node* curr=q.front();
+        q.pop();
         res.push_back(curr);
         if(curr->left!=nullptr)
             q.push(curr->left);
