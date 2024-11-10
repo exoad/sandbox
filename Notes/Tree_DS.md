@@ -1,5 +1,15 @@
 # Trees
 
+## Table of Contents
+
+- [Trees](#trees)
+   * [Overview ](#overview)
+   * [Terminology](#terminology)
+   * [Properties](#properties)
+   * [Types of Trees](#types-of-trees)
+   * [Relation to Graph Theory](#relation-to-graph-theory)
+   * [References](#references)
+
 ## Overview 
 Trees are the first type of non-linear data structure encountered often. In hindsight, they are a collection of nodes and edges. All of these are connected by a root node at the top of the tree:
 
@@ -15,14 +25,15 @@ These words are very important to known in general when working with non-linear 
 4. **Child** - A node that is a immediate descendent to another node (the parent)
 5. **Root** - The topmost node of the Tree and does not have a parent node.
 6. **Ancestor** - All nodes that precedes a node.  
-7. **Depth/Level** - The level of a node refers to how many nodes down it is from the root node, with the *level of the root node=0*
+7. **Depth/Level of a Node** - Refers to the number of edges from the root to that node; *level of the root node=0*
 8. **Leaf** - Any nodes that do not have any children (also known as ***external nodes***)
 9. **Branch/Path** - A path on the tree that spans from the root to a leaf
 10. **Height** - The number of edges along the longest branch/path in the tree
 11. **Subtree** - Any node that has its own descendants/children
-12. **Height of a Node** is the length of the longest path from that node to a leaf node
-13. **Degree of a Node** is the amount of children it has
+12. **Height of a Node** - Refers to the number of edges from that node to the deepest leaf node
+13. **Degree of a Node** - The amount of child nodes a node has.
 14. **Internal Nodes** - All nodes that are not leaves (includes the root if the root is not a leaf itself)
+15. **Empty Tree** - An empty tree is one without nodes (not even the root node).
 
 ## Properties
 
@@ -34,7 +45,7 @@ These words are very important to known in general when working with non-linear 
 
 The trees family has multiple variations:
 
-1. Binary Trees
+1. [Binary Trees](./Binary_Tree_DS.md)
 2. Binary Search Trees (BST)
 3. AVL Trees
 4. k-d Trees

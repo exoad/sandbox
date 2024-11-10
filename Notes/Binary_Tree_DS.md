@@ -28,8 +28,6 @@ for tree={
 
 </details>
 
-
-
 ### Properties
 
 1. **The maximum nodes at a level $L$ is $2^L$**
@@ -152,3 +150,107 @@ All nodes in the tree have only one child that is either left or right.
 </details>
 
 ### Perfect Binary Tree
+
+A type of [full binary tree](#full-binary-tree) where all nodes have 2 children and the leaf nodes are all at the same level.
+
+<img src="./Images/Full_Perfect_Binary_Tree.png" width=45% />
+<details>
+<summary>LaTeX Source</summary>
+
+```tex
+\documentclass[margin=4mm]{standalone}
+\usepackage[edges]{forest}
+\usepackage{tikz-qtree}
+\begin{document}
+\tikzset{every tree node/.style={minimum width=2em,draw,circle},
+         blank/.style={draw=none},
+         edge from parent/.style=
+         {draw,edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+         level distance=1.25cm}
+\begin{tikzpicture}
+\Tree
+[.A
+    [.B 
+    \edge[]; \node[]{G};
+    \edge[]; \node[]{H};
+    ]
+    [.C 
+    \edge[]; \node[]{E};
+    \edge[]; \node[]{D};
+    ]
+]
+\end{tikzpicture}
+\end{document}
+```
+
+</details>
+
+### Skewed Binary Tree
+
+A binary tree where all nodes have either **only** left or **only** right child nodes.
+
+<img src="./Images/Skewed_Binary_Tree.png" width=25% />
+<details>
+<summary>LaTeX Source</summary>
+
+```tex
+\documentclass[margin=4mm]{standalone}
+\usepackage[edges]{forest}
+\usepackage{tikz-qtree}
+\begin{document}
+\tikzset{every tree node/.style={minimum width=2em,draw,circle},
+         blank/.style={draw=none},
+         edge from parent/.style=
+         {draw,edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+         level distance=1.25cm}
+\begin{tikzpicture}
+\Tree
+[.A
+    \edge[]; [.B
+        \edge[]; [.C
+            \edge[]; {D}
+            \edge[blank]; \node[blank]{};
+        ]
+        \edge[blank]; \node[blank]{};
+    ]
+    \edge[blank]; \node[blank]{};
+]
+\end{tikzpicture}
+\end{document}
+```
+
+</details>
+
+
+### Balanced Binary Tree
+
+A type of binary trees where the height of the binary is $O(log\ H)$ where $H$ is the height of the binary tree. **Read more [here](./Balanced_Binary_Tree_DS.md)**
+
+<img src="./Images/Generic_Balanced_Binary_Tree.png" width=30% />
+<details>
+<summary>LaTeX Source</summary>
+
+```tex
+\documentclass[margin=4mm]{standalone}
+\usepackage[edges]{forest}
+\usepackage{tikz-qtree}
+\begin{document}
+\tikzset{every tree node/.style={minimum width=2em,draw,circle},
+         blank/.style={draw=none},
+         edge from parent/.style=
+         {draw,edge from parent path={(\tikzparentnode) -- (\tikzchildnode)}},
+         level distance=1.25cm}
+\begin{tikzpicture}
+\Tree
+[.A
+    \edge[]; [.B
+        \edge[]; {D}
+        \edge[]; \node[]{E};
+    ]
+    \edge[]; \node[]{C};
+]
+\end{tikzpicture}
+\end{document}
+```
+
+</details>
