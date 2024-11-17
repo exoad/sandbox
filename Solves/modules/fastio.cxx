@@ -163,5 +163,5 @@ using namespace FASTIO;
 #define endl '\n'
 int main()
 {
-    
+    int 
 }
