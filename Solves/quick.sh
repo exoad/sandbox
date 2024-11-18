@@ -1,6 +1,6 @@
 if [ "$1" == "go" ] ;
 then 
-    g++ -g -fsanitize=undefined -O1 -march=x86-64 "$2.cxx" -o temp.out
+    g++ -g -fsanitize=undefined -DLOCAL_JUDGE_HOST -march=x86-64 "$2.cxx" -o temp.out
     echo -e "\e[31;41;1m\n\n               READY               \n\n============[==入力==]=============\n\n\e[0m"
     OUTPUT="$(./temp.out)"
     echo -e "\e[31;42;1m\n\n\n[=====出力=====]\n\tサンプル\n${OUTPUT}\e[0m"

@@ -34,7 +34,6 @@
 #include <string.h>
 #include <unistd.h>
 using namespace std;
-// using namespace __gnu_pbds;
 using ll=long long;
 using ull=unsigned long long;
 using ld=long double;
@@ -44,9 +43,16 @@ using str=string;
 #define all(x) x.begin(),x.end()
 #define rall(x) x.rbegin(),x.rend()
 #define pb push_back
+#define lb lower_bound
+#define ub upper_bound
 #define eb emplace_back
-#define it insert
 #define RANGE(a,b) for(int i=a;i<=b;i++)
+#define PI 3.14159265358979323846
+#ifdef LOCAL_JUDGE_HOST
+#   define __trace(x) cerr<<"["<<__LINE__<<"] "<<#x<<"@"<<&x<<"="<<x<<endl;
+#else
+#   define __trace(x)
+#endif
 namespace judge
 {
     template<typename T>
@@ -57,7 +63,9 @@ namespace judge
 
     inline void setIO(str name="") 
     {
-        cin.tie(FALSE)->sync_with_stdio(FALSE);
+        ios_base::sync_with_stdio(false);
+        cin.tie(nullptr);
+        cout.tie(nullptr);
         if (int(name.size())) 
         {
             freopen((name+".in").c_str(),"r",stdin); 
@@ -102,6 +110,11 @@ namespace judge
 using namespace judge;
 namespace generics 
 {
+    #include <ext/pb_ds/assoc_container.hpp>
+    #include <ext/pb_ds/tree_policy.hpp>
+    using namespace __gnu_pbds;
+    template <typename T> 
+    using ordered_set=tree<T,null_type,less<T>,rb_tree_tag,tree_order_statistics_node_update>;
     template<typename T>
     class Graph 
     {
@@ -173,7 +186,7 @@ namespace generics
             if((v=find(v))==(w=find(w))) 
                 return false;
             if(uf[v]>uf[w]) 
-                swap(v,w);
+                ::swap(v,w);
             uf[v]+=uf[w];
             uf[w]=v;
             n--;
