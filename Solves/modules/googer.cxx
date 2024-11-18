@@ -106,6 +106,7 @@ namespace generics
     class Graph 
     {
         public:
+            struct Edge 
             {
                 int from;
                 int to;
@@ -113,7 +114,7 @@ namespace generics
                 Edge(int from,int to,T weight):from(from),to(to),weight(weight)
                 {
                 }
-            }
+            };
             vector<Edge> edges;
             vector<vector<int>> ver;
             int n;
@@ -121,7 +122,7 @@ namespace generics
             {
                 ver.resize(n);
             }
-            virtual int addEdge(Edge edge)=0;
+            virtual int addEdge(const Edge& edge)=0;
     };
     template<typename T>
     class UndirectedGraph:public Graph<T> 
@@ -130,7 +131,7 @@ namespace generics
             UndirectedGraph(int n):Graph<T>(n)
             {
             }
-            int addEdge(Edge edge) override
+            int addEdge(const typename Graph<T>::Edge& edge) override
             {
                 assert(0<=edge.from&&edge.from<Graph<T>::n&&0<=edge.to&&edge.to<Graph<T>::n);
                 int id=(int)Graph<T>::edges.size();
@@ -147,7 +148,7 @@ namespace generics
             DirectedGraph(int n):Graph<T>(n)
             {
             }
-            int addEdge(Edge edge) override
+            int addEdge(const typename Graph<T>::Edge& edge) override
             {
                 assert(0<=edge.from&&edge.from<Graph<T>::n&&0<=edge.to&&edge.to<Graph<T>::n);
                 int id=(int)Graph<T>::edges.size();
