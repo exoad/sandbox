@@ -12,6 +12,11 @@
         "random": "cpp",
         "iostream": "cpp",
         "chrono": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "ostream": "cpp",
+        "regex": "cpp",
+        "valarray": "cpp",
+        "list": "cpp",
+        "string": "cpp"
     }
 }

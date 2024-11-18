@@ -70,20 +70,10 @@ U0 setIO(STR name="")
 // --------------------------------- //
 // 問題 ~ コンテストに参加する前に ~ 問題 //
 // --------------------------------- //
-#include <unordered_map>
+
 I32 main()
 {
     setIO();
-    I32 n;
-    cin>>n;
-    unordered_map<STR,I32> ix;
-    while(n--)
-    {
-        STR x;
-        cin>>x;
-        ix[x]++;
-    }
-    *max_element(ix.begin(),ix.end(),
-                             [](const std::pair<STR,I32> &a,const std::pair<STR,I32> &b){return a.second<b.second;});
+    
     YIELD(0);
 }
