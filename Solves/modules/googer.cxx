@@ -11,6 +11,7 @@
 #pragma GCC diagnostic ignored "-Wunused-label"
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #pragma GCC diagnostic ignored "-Wmissing-braces"
+#pragma GCC diagnostic ignore "-Wmaybe-uninitialized"
 #pragma GCC diagnostic ignored "-Wmissing-declarations"
 #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #pragma GCC optimize("Ofast", "unroll-loops")

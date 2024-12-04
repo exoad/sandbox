@@ -30,6 +30,7 @@
 #pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #pragma GCC diagnostic ignored "-Wmissing-braces"
 #pragma GCC diagnostic ignored "-Wmissing-declarations"
+#pragma GCC diagnostic ignore "-Wmaybe-uninitialized"
 #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 #pragma GCC optimize("Ofast", "unroll-loops")
 #ifdef __linux__
@@ -214,7 +215,7 @@ signed main()
         for(int i=0;i<n;i++)
         {
                 while(ax<n-1&&!p.count(k[ax+1]))
-                        p.insert(k[ax++]);
+                        p.insert(k[++ax]);
                 ans=max(ans,ax-i+1);
                 p.erase(k[i]);
         }
