@@ -1,3 +1,4 @@
+// this does not work, only passes like all samples and 23 tcs (12 was)
 #include <algorithm>
 #include <array>
 #include <iostream>
@@ -203,9 +204,34 @@ namespace generics
                 }
         };
 };
+const int MAX=5050;
+int n,x;
+#include <iomanip>
+double a[MAX],b[MAX],p[MAX];
 signed main()
 {
         setIO();
-
+        cin>>n>>x;
+        for(int i=1;i<=n;i++)
+        {
+                cin>>p[i];
+                p[i]/=100;
+        }
+        b[0]=1;
+        for(int i=1;i<=n;i++)
+        {
+                for(int j=n;j>=1;j--)
+                        b[j]=b[j]*(1.0-p[i])+b[j-1]*p[i];
+                b[0]*=1.0-p[i];
+        }
+        a[0]=0;
+        for(int i=1;i<=x;i++)
+        {
+                for(int j=1;j<i;j++)
+                        a[i]+=a[i-j]*b[j];
+                a[i]++;
+                a[i]/=(1-b[0]);
+        }
+        cout<<setprecision(12)<<left<<setfill('0')<<setw(12)<<a[x];
         return 0;
 }
