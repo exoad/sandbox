@@ -5,6 +5,7 @@
 #include <set>
 #include <map>
 #include <queue>
+#include <numeric>
 #include <utility>
 #include <bitset>
 #include <unordered_map>
