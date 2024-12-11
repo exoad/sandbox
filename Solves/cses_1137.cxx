@@ -236,9 +236,56 @@ namespace generics
                         }
         };
 };
+vector<vector<int>> neighbors;
+vector<int> beg,last;
+int timer=0;
+void tour(int at,int stop)
+{
+        beg[at]=timer++;
+        for(int n:neighbors[at])
+                if(n!=stop)
+                        tour(n,at);
+        last[at]=timer;
+}
 signed main()
 {
         setIO();
-
+        int n,q;
+        cin>>n>>q;
+        neighbors.resize(n);
+        beg.resize(n);
+        last.resize(n);
+        vector<int> v(n);
+        for(int& x:v)
+                cin>>x;
+        for(int i=0;i<n-1;i++)
+        {
+                int a,b;
+                cin>>a>>b;
+                neighbors[--a].push_back(--b);
+                neighbors[b].push_back(a);
+        }
+        tour(0,-1);
+        generics::BIT<int64_t> bit(n);
+        for(int i=0;i<n;i++)
+                bit.set(beg[i],v[i]);
+        for(int i=0;i<q;i++)
+        {
+                int t;
+                cin>>t;
+                switch(t)
+                {
+                        case 1:
+                                int ni,v;
+                                cin>>ni>>v;
+                                bit.set(beg[--ni],v);
+                                break;
+                        case 2:
+                                int nii;
+                                cin>>ni;
+                                cout<<(bit.psum(last[--nii]-1)-(beg[nii]==0?0:bit.psum(beg[nii]-1)))<<endl;
+                                break;
+                }
+        }
         return 0;
 }

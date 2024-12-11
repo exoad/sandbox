@@ -202,43 +202,10 @@ namespace generics
                         return -uf[find(v)];
                 }
         };
-        template<class T>
-        class BIT
-        {
-                private:
-                        int sz;
-                        vector<T> bit,arr;
-                public:
-                        BIT(int sz):sz(sz),bit(sz+1),arr(sz)
-                        {
-                        }
-
-                        void add(int i,int v)
-                        {
-                                arr[i]+=v;
-                                i++;
-                                for(;i<=sz;i+=low_bit(i))
-                                        bit[i]+=v;
-                        }
-
-                        T psum(int i)
-                        {
-                                i++;
-                                T sum=0;
-                                for(;i>0;i-=low_bit(i))
-                                        sz+=bit[i];
-                                return sum;
-                        }
-
-                        void set(int i,int v)
-                        {
-                                add(i,v-arr[i]);
-                        }
-        };
 };
 signed main()
 {
         setIO();
-
+        
         return 0;
 }
