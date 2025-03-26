@@ -56,7 +56,7 @@ void main(List<String> args) {
 #### Hardware
 
 - **Processor:** `AMD EPYC 7763`
-- **Total RAM** `8 GB`
+- **Total RAM** `64 GB`
 
 ### Results
 
